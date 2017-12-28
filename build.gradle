@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 
@@ -8,11 +9,11 @@ version = '1.0'
 repositories {
     mavenCentral()
 }
-    
+
 dependencies {
 	compile 'org.codehaus.groovy:groovy-all:2.3.6'
     compile 'org.springframework:spring-context:4.0.6.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-logging:1.1.4.RELEASE'
+	compile 'org.springframework.boot:spring-boot-starter-logging:1.1.4.RELEASE'
     testCompile 'junit:junit:4.11'
 }
 
@@ -21,7 +22,7 @@ test {
         events 'started', 'passed'
     }
 
-    onOutput { descriptor, event ->
-        logger.lifecycle(event.message)
-    }
+	onOutput { descriptor, event ->
+		logger.lifecycle(event.message)
+	}
 }
