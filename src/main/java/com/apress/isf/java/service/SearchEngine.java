@@ -8,4 +8,5 @@ import com.apress.isf.java.model.Type;
 public interface SearchEngine {
 	public List<Document> findByType(Type documentType);
 	public List<Document> listAll();
+	public List<Document> findByLocation(String location);
 }
