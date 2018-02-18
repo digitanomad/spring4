@@ -2,36 +2,24 @@ package com.apress.isf.spring.data;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.apress.isf.java.model.Document;
 
+@Repository("documentDAO")
 public class DocumentRepository implements DocumentDAO {
 	
-	private static final Logger log = LoggerFactory.getLogger(DocumentRepository.class);
-	private List<Document> documents = null;
+	@Autowired
+	private String query;
+	@Autowired
+	private DataSource dataSource;
 	
-    public List<Document> getDocuments() {
-        return documents;
-    }
-    
-    public void setDocuments(List<Document> documents) {
-        this.documents = documents;
-    }
-    
-    public Document[] getAll() {
-    	if (log.isDebugEnabled()) {
-			log.debug("Start <getAll> Params: ");
-		}
-    	
-    	Document[] result = documents.toArray(new Document[documents.size()]);
-    	
-    	if (log.isDebugEnabled()) {
-			log.debug("End <getAll> Result:" + result);
-		}
-    	
-    	return result;
+    public List<Document> getAll() {
+    	return new JdbcTemplate(this.dataSource).query(query, new DocumentRowMapper());
     }
 
 }

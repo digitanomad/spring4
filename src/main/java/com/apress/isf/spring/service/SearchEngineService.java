@@ -1,7 +1,6 @@
 package com.apress.isf.spring.service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import com.apress.isf.java.model.Document;
@@ -35,7 +34,7 @@ public class SearchEngineService implements SearchEngine {
     }
 
     public List<Document> listAll() {
-        return Arrays.asList(documentDAO.getAll());
+        return documentDAO.getAll();
     }
 
 	@Override

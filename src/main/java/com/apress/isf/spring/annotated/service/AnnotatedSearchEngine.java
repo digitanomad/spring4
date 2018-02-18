@@ -1,7 +1,6 @@
 package com.apress.isf.spring.annotated.service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -41,7 +40,7 @@ public class AnnotatedSearchEngine implements SearchEngine {
     }
 
     public List<Document> listAll() {
-        return Arrays.asList(documentDAO.getAll());
+        return documentDAO.getAll();
     }
 
 	@Override

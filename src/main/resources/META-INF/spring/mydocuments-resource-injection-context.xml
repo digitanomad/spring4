@@ -4,8 +4,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<context:com	
-
   <bean id="menu" class="com.apress.isf.spring.views.Menu">
     <property name="menuFile" value="classpath:META-INF/data/menu.txt" />
   </bean>
