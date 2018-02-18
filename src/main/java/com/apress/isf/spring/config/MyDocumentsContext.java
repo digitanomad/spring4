@@ -1,6 +1,5 @@
 package com.apress.isf.spring.config;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -95,7 +94,7 @@ public class MyDocumentsContext {
 
     private DocumentDAO documentDAO() {
     	DocumentRepository documentDAO = new DocumentRepository();
-		documentDAO.setDocuments(new ArrayList<Document>(documents.values()));
+		//documentDAO.setDocuments(new ArrayList<Document>(documents.values()));
 		
 		return documentDAO;
     }
