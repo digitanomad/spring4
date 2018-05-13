@@ -28,4 +28,9 @@ public class DocumentJdbcTemplateRepository implements DocumentDAO {
 	public List<Document> getAll() {
 		return jdbcTemplate.query(query, new DocumentRowMapper());
 	}
+
+	@Override
+	public void save(Document document) {
+		throw new UnsupportedOperationException();
+	}
 }

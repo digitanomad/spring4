@@ -16,7 +16,7 @@ import com.apress.isf.java.model.Document;
 import com.apress.isf.java.model.Type;
 import com.apress.isf.spring.data.DocumentDAO;
 
-//@Repository("documentDAO")
+@Repository("AnnotatedDocumentDAO")
 public class AnnotatedDocumentRepository implements DocumentDAO {
 
 	private static final String queryAll =
@@ -71,5 +71,10 @@ public class AnnotatedDocumentRepository implements DocumentDAO {
     	
     	return result;
     }
+
+	@Override
+	public void save(Document document) {
+		throw new UnsupportedOperationException();
+	}
 
 }
