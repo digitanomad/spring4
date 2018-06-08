@@ -28,6 +28,7 @@ public class AnnotatedDocumentRepository implements DocumentDAO {
 	@Autowired
 	private DataSource dataSource;
 	
+	@Override
     public List<Document> getAll() {
     	List<Document> result = new ArrayList<Document>();
     	Connection connection = null;
@@ -72,9 +73,23 @@ public class AnnotatedDocumentRepository implements DocumentDAO {
     	return result;
     }
 
-	@Override
+    @Override
 	public void save(Document document) {
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public Document save(String id, Document document) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Document findById(String id) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Document removeById(String id) {
+		throw new UnsupportedOperationException();
+	}
 }

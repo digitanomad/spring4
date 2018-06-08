@@ -33,4 +33,20 @@ public class DocumentJdbcTemplateRepository implements DocumentDAO {
 	public void save(Document document) {
 		throw new UnsupportedOperationException();
 	}
+
+	@Override
+	public Document save(String id, Document document) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Document findById(String id) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Document removeById(String id) {
+		throw new UnsupportedOperationException();
+	}
+
 }
