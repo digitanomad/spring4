@@ -13,9 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
-import org.springframework.stereotype.Component;
 
-@Component("JMSProducer")
 public class JMSProducer {
 
 	@Value("classpath:META-INF/data/jms.txt")

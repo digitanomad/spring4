@@ -16,6 +16,7 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.6'
     compile 'org.aspectj:aspectjrt:1.7.4'
     compile 'org.springframework:spring-context:4.0.6.RELEASE'
+    compile 'org.springframework:spring-context-support:4.0.6.RELEASE'
     compile 'org.springframework:spring-jdbc:4.0.6.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-web:1.1.4.RELEASE'
     compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
@@ -23,6 +24,8 @@ dependencies {
     runtime 'cglib:cglib:3.1'
     runtime 'org.aspectj:aspectjweaver:1.7.4'
     runtime 'hsqldb:hsqldb:1.8.0.10'
+    
+    runtime 'javax.mail:mail:1.4'
     
     compile 'org.springframework:spring-jms:4.0.6.RELEASE'
     compile 'org.springframework.amqp:spring-rabbit:1.3.5.RELEASE'

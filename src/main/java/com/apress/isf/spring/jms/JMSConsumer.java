@@ -6,13 +6,11 @@ import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import com.apress.isf.java.model.Document;
 import com.apress.isf.java.utils.XmlUtils;
 import com.apress.isf.spring.data.DocumentDAO;
 
-@Component
 public class JMSConsumer implements MessageListener {
 
 	@Autowired
